@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "UPduino"
-Date ""
-Rev "3.0 v0.1"
+Date "2020-08-10"
+Rev "3.0 v0.2"
 Comp "tinyVision.ai Inc."
 Comment1 ""
 Comment2 ""
@@ -1274,22 +1274,7 @@ Wire Wire Line
 	12750 3350 11900 3350
 Wire Wire Line
 	10150 7500 9300 7500
-$Comp
-L UPduino_v3.0:power_GND #PWR059
-U 1 1 5E280FC6
-P 12700 1750
-F 0 "#PWR059" H 12700 1500 50  0001 C CNN
-F 1 "GND" V 12705 1622 50  0001 R CNN
-F 2 "" H 12700 1750 50  0001 C CNN
-F 3 "" H 12700 1750 50  0001 C CNN
-	1    12700 1750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	12750 1650 11900 1650
-Wire Wire Line
-	12750 1750 12700 1750
-Text Label 11900 1650 0    50   ~ 0
+Text Label 11900 1750 0    50   ~ 0
 CLK_12M_EXT
 Text Label 13900 2100 0    50   ~ 0
 IOT_37A
@@ -1534,7 +1519,7 @@ L UPduino_v3.0:Device_R R22
 U 1 1 5E5D05A4
 P 9150 7500
 F 0 "R22" V 9050 7400 50  0000 C CNN
-F 1 "JUMPER" V 9050 7650 50  0000 C CNN
+F 1 "OPEN" V 9050 7650 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 9080 7500 50  0001 C CNN
 F 3 "~" H 9150 7500 50  0001 C CNN
 	1    9150 7500
@@ -1545,7 +1530,7 @@ L UPduino_v3.0:Device_R R23
 U 1 1 5E5D1111
 P 9150 7650
 F 0 "R23" V 9250 7550 50  0000 C CNN
-F 1 "JUMPER" V 9250 7800 50  0000 C CNN
+F 1 "OPEN" V 9250 7800 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 9080 7650 50  0001 C CNN
 F 3 "~" H 9150 7650 50  0001 C CNN
 	1    9150 7650
@@ -1595,22 +1580,22 @@ Wire Wire Line
 	5950 4650 6400 4650
 Connection ~ 6400 4650
 $Comp
-L UPduino_v3.0:Device_R R24
+L UPduino_v3.0:Device_R SJ24
 U 1 1 5E89E36B
 P 9250 5250
-F 0 "R24" V 9457 5250 50  0000 C CNN
-F 1 "JUMPER" V 9366 5250 50  0000 C CNN
+F 0 "SJ24" V 9457 5250 50  0000 C CNN
+F 1 "OPEN" V 9366 5250 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 9180 5250 50  0001 C CNN
 F 3 "~" H 9250 5250 50  0001 C CNN
 	1    9250 5250
 	0    -1   -1   0   
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R25
+L UPduino_v3.0:Device_R SJ25
 U 1 1 5E89EBFA
 P 9250 5350
-F 0 "R25" V 9050 5350 50  0000 C CNN
-F 1 "JUMPER" V 9150 5350 50  0000 C CNN
+F 0 "SJ25" V 9050 5350 50  0000 C CNN
+F 1 "OPEN" V 9150 5350 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 9180 5350 50  0001 C CNN
 F 3 "~" H 9250 5350 50  0001 C CNN
 	1    9250 5350
@@ -1649,7 +1634,7 @@ FLASH_MOSI
 Text Label 13550 7950 0    50   ~ 0
 FPGA_SI
 Text Notes 8800 8700 0    50   ~ 0
-This mode requires the flash \nto be programmed with the \ntinyFPGA bootloader.\n\nTo enable:\n- Program Flash with bootloader\n- Short C26\n- Open R35, 36\n- Install R22, R23 (68 Ohms)\n- Install R21 (1.5K)\n- Enjoy!
+This mode requires the flash \nto be programmed with the \ntinyFPGA bootloader.\n\nTo enable:\n- Program Flash with bootloader\n- Open R35, 36\n- Install R22, R23 (68 Ohms)\n- Install R21 (1.5K)\n- Enjoy!
 Text Notes 12150 8800 0    100  ~ 0
 Programming modes:\nFlash: Default, horizontal short\nCRAM: Optional, vertical short
 Wire Wire Line
@@ -2171,11 +2156,11 @@ F 3 "" H 2800 5950 50  0001 C CNN
 $EndComp
 Connection ~ 2800 5650
 $Comp
-L UPduino_v3.0:Device_R R34
+L UPduino_v3.0:Device_R SJ34
 U 1 1 5DE282FB
 P 1200 5650
-F 0 "R34" V 993 5650 50  0000 C CNN
-F 1 "JUMPER" V 1084 5650 50  0000 C CNN
+F 0 "SJ34" V 993 5650 50  0000 C CNN
+F 1 "SHORT" V 1084 5650 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" V 1130 5650 50  0001 C CNN
 F 3 "~" H 1200 5650 50  0001 C CNN
 	1    1200 5650
@@ -2231,22 +2216,22 @@ F 3 "" H 14200 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R_Small R35
+L UPduino_v3.0:Device_R_Small SJ35
 U 1 1 5DEBD329
 P 2250 8250
-F 0 "R35" V 2200 8425 50  0000 C CNN
-F 1 "JUMPER" V 2200 8100 50  0000 C CNN
+F 0 "SJ35" V 2200 8425 50  0000 C CNN
+F 1 "SHORT" V 2200 8100 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" H 2250 8250 50  0001 C CNN
 F 3 "~" H 2250 8250 50  0001 C CNN
 	1    2250 8250
 	0    1    1    0   
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R_Small R36
+L UPduino_v3.0:Device_R_Small SJ36
 U 1 1 5DEBDB7A
 P 2250 8350
-F 0 "R36" V 2200 8525 50  0000 C CNN
-F 1 "JUMPER" V 2200 8200 50  0000 C CNN
+F 0 "SJ36" V 2200 8525 50  0000 C CNN
+F 1 "SHORT" V 2200 8200 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" H 2250 8350 50  0001 C CNN
 F 3 "~" H 2250 8350 50  0001 C CNN
 	1    2250 8350
@@ -2520,22 +2505,22 @@ F 3 "" H 1800 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R20
+L UPduino_v3.0:Device_R SJ20
 U 1 1 5EBE8A92
 P 6300 1050
-F 0 "R20" H 6450 1150 50  0000 C CNN
-F 1 "JUMPER" H 6500 1050 50  0000 C CNN
+F 0 "SJ20" H 6450 1150 50  0000 C CNN
+F 1 "SHORT" H 6500 1050 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" V 6230 1050 50  0001 C CNN
 F 3 "~" H 6300 1050 50  0001 C CNN
 	1    6300 1050
 	1    0    0    -1  
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R26
+L UPduino_v3.0:Device_R SJ26
 U 1 1 5EBE8A99
 P 6800 1050
-F 0 "R26" H 6950 1150 50  0000 C CNN
-F 1 "JUMPER" H 7000 1050 50  0000 C CNN
+F 0 "SJ26" H 6950 1150 50  0000 C CNN
+F 1 "OPEN" H 7000 1050 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 6730 1050 50  0001 C CNN
 F 3 "~" H 6800 1050 50  0001 C CNN
 	1    6800 1050
@@ -2627,22 +2612,22 @@ F 3 "" H 14600 1800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R19
+L UPduino_v3.0:Device_R SJ19
 U 1 1 5EB96AC4
 P 2350 1050
-F 0 "R19" H 2500 1150 50  0000 C CNN
-F 1 "JUMPER" H 2550 1050 50  0000 C CNN
+F 0 "SJ19" H 2500 1150 50  0000 C CNN
+F 1 "OPEN" H 2550 1050 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 2280 1050 50  0001 C CNN
 F 3 "~" H 2350 1050 50  0001 C CNN
 	1    2350 1050
 	1    0    0    -1  
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R31
+L UPduino_v3.0:Device_R SJ31
 U 1 1 5DF82856
 P 1800 1050
-F 0 "R31" H 1950 1150 50  0000 C CNN
-F 1 "JUMPER" H 2000 1050 50  0000 C CNN
+F 0 "SJ31" H 1950 1150 50  0000 C CNN
+F 1 "SHORT" H 2000 1050 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" V 1730 1050 50  0001 C CNN
 F 3 "~" H 1800 1050 50  0001 C CNN
 	1    1800 1050
@@ -2969,11 +2954,11 @@ F 3 "" H 10400 2475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UPduino_v3.0:Device_R R16
+L UPduino_v3.0:Device_R SJ16
 U 1 1 5E39536F
 P 10700 1250
-F 0 "R16" V 10907 1250 50  0000 C CNN
-F 1 "JUMPER" V 10816 1250 50  0000 C CNN
+F 0 "SJ16" V 10907 1250 50  0000 C CNN
+F 1 "OPEN" V 10816 1250 50  0000 C CNN
 F 2 "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" V 10630 1250 50  0001 C CNN
 F 3 "~" H 10700 1250 50  0001 C CNN
 	1    10700 1250
@@ -3082,7 +3067,7 @@ L UPduino_v3.0:Device_R R28
 U 1 1 5E374072
 P 10750 4650
 F 0 "R28" H 10900 4600 50  0000 C CNN
-F 1 "JUMPER" H 10975 4700 50  0000 C CNN
+F 1 "SHORT" H 10950 4700 50  0000 C CNN
 F 2 "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" V 10680 4650 50  0001 C CNN
 F 3 "~" H 10750 4650 50  0001 C CNN
 	1    10750 4650
@@ -3168,4 +3153,19 @@ Text Label 11900 1150 0    50   ~ 0
 FT_SCK
 Wire Wire Line
 	2650 8550 2900 8550
+$Comp
+L UPduino_v3.0:power_GND #PWR0107
+U 1 1 5F065A7C
+P 12650 1650
+F 0 "#PWR0107" H 12650 1400 50  0001 C CNN
+F 1 "GND" H 12655 1477 50  0001 C CNN
+F 2 "" H 12650 1650 50  0001 C CNN
+F 3 "" H 12650 1650 50  0001 C CNN
+	1    12650 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12750 1650 12650 1650
+Wire Wire Line
+	11900 1750 12750 1750
 $EndSCHEMATC
